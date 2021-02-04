@@ -3,11 +3,15 @@ var upgrade2 = 0;
 var upgrade3 = 0;
 var upgrade4 = 0;
 var upgrade5 = 0;
+var upgrade6 = 0;
+var upgrade7 = 0;
 var upgrade1Price = 15;
 var upgrade2Price = 100;
 var upgrade3Price = 500;
 var upgrade4Price = 3000;
 var upgrade5Price = 25000;
+var upgrade6Price = 100000;
+var upgrade7Price = 1000000;
 var linesOfCode = 0;
 var CPS = 0;
 var CPC = 1;
@@ -59,6 +63,22 @@ function buyUpgrade5() {
 	CPS += 20
 	upgrade5 +=1
 	document.getElementById("upgrade5").innerHTML = upgrade5;
+	document.getElementById("count").innerHTML = linesOfCode;
+}
+
+function buyUpgrade6() {
+	linesOfCode -= 100000
+	CPS += 50
+	upgrade6 +=1
+	document.getElementById("upgrade6").innerHTML = upgrade6;
+	document.getElementById("count").innerHTML = linesOfCode;
+}
+
+function buyUpgrade7() {
+	linesOfCode -= 1000000
+	CPS += 100
+	upgrade7 +=1
+	document.getElementById("upgrade7").innerHTML = upgrade7;
 	document.getElementById("count").innerHTML = linesOfCode;
 }
 
