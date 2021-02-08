@@ -11,3 +11,7 @@ With 7 upgrades, such as radiation caused extra hand growth and a Stack Overflow
 ## joint snappingly good
 
 You'll be sure to have fun with Code Clicker, a Lucas Potter production.
+
+## changelog
+
+v1.0.0: The game is released! Play at https://Code-Clicker.lucaspotter2.repl.co

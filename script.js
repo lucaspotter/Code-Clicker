@@ -34,7 +34,7 @@ function sleep(milliseconds) {
 
 
 function buyUpgrade1() {
-	if (linesOfCode > upgrade1Price) {
+	if (linesOfCode < upgrade1Price) {
 		alert("You do not have enough lines of code!")
 		return;
 	}
@@ -145,7 +145,7 @@ function buyUpgrade7() {
 	document.getElementById("count").innerHTML = linesOfCode;
 }
 
-function click() {
+function clickThatKeyboard() {
 	linesOfCode += CPC
 	document.getElementById("count").innerHTML = linesOfCode;
 }
