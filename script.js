@@ -5,6 +5,7 @@ var upgrade4 = 0;
 var upgrade5 = 0;
 var upgrade6 = 0;
 var upgrade7 = 0;
+var upgrade8 = 0;
 var upgrade1Price = 0;
 var upgrade2Price = 100;
 var upgrade3Price = 500;
@@ -12,6 +13,7 @@ var upgrade4Price = 3000;
 var upgrade5Price = 25000;
 var upgrade6Price = 100000;
 var upgrade7Price = 1000000;
+var upgrade8Price = 5000000;
 var site1Price = upgrade1Price + " Lines of Code"
 var site2Price = upgrade2Price + " Lines of Code"
 var site3Price = upgrade3Price + " Lines of Code"
@@ -19,6 +21,8 @@ var site4Price = upgrade4Price + " Lines of Code"
 var site5Price = upgrade5Price + " Lines of Code"
 var site6Price = upgrade6Price + " Lines of Code"
 var site7Price = upgrade7Price + " Lines of Code"
+var site8Price = upgrade8Price + " Lines of Code"
+var haveUpgrade8 = false
 var linesOfCode = 0;
 var CPS = 0;
 var CPC = 0;
@@ -123,7 +127,7 @@ function buyUpgrade6() {
 	CPS += 50
 	upgrade6 +=1
 	upgrade6Price += 10000
-	site6Price = upgrade6Price + "Lines of Code"
+	site6Price = upgrade6Price + " Lines of Code"
 	document.getElementById("upgrade6").innerHTML = upgrade6;
 	document.getElementById("upgrade6Price").innerHTML = site6Price;
 	document.getElementById("count").innerHTML = linesOfCode;
@@ -142,6 +146,26 @@ function buyUpgrade7() {
 	site7Price = upgrade7Price + " Lines of Code"
 	document.getElementById("upgrade7").innerHTML = upgrade7;
 	document.getElementById("upgrade7Price").innerHTML = site7Price;
+	document.getElementById("count").innerHTML = linesOfCode;
+}
+
+function buyUpgrade8() {
+	if (linesOfCode < upgrade8Price) {
+		alert("You do not have enough lines of code!")
+		return;
+	}
+
+	if (haveUpgrade8 == true) {
+		alert("You cannot buy another one!")
+		return;
+	}
+
+	linesOfCode -= upgrade8Price
+	CPC += 1000
+	upgrade8 +=1
+	haveUpgrade8 = true
+	document.getElementById("upgrade8").innerHTML = upgrade8;
+	document.getElementById("upgrade8Price").innerHTML = "You cannot buy another one.";
 	document.getElementById("count").innerHTML = linesOfCode;
 }
 
