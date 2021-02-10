@@ -6,6 +6,7 @@ var upgrade5 = 0;
 var upgrade6 = 0;
 var upgrade7 = 0;
 var upgrade8 = 0;
+var upgrade9 = 0;
 var upgrade1Price = 0;
 var upgrade2Price = 100;
 var upgrade3Price = 500;
@@ -14,6 +15,7 @@ var upgrade5Price = 25000;
 var upgrade6Price = 100000;
 var upgrade7Price = 1000000;
 var upgrade8Price = 5000000;
+var upgrade9Price = 5000000;
 var site1Price = upgrade1Price + " Lines of Code"
 var site2Price = upgrade2Price + " Lines of Code"
 var site3Price = upgrade3Price + " Lines of Code"
@@ -22,6 +24,7 @@ var site5Price = upgrade5Price + " Lines of Code"
 var site6Price = upgrade6Price + " Lines of Code"
 var site7Price = upgrade7Price + " Lines of Code"
 var site8Price = upgrade8Price + " Lines of Code"
+var site9Price = upgrade9Price + " Lines of Code"
 var haveUpgrade8 = false
 var linesOfCode = 0;
 var CPS = 0;
@@ -168,6 +171,23 @@ function buyUpgrade8() {
 	document.getElementById("upgrade8Price").innerHTML = "You cannot buy another one.";
 	document.getElementById("count").innerHTML = linesOfCode;
 }
+
+function buyUpgrade9() {
+	if (linesOfCode < upgrade9Price) {
+		alert("You do not have enough lines of code!")
+		return;
+	}
+
+	linesOfCode -= upgrade9Price
+	CPS += 1000
+	upgrade9 +=1
+	upgrade9Price += 1000000
+	site9Price = upgrade9Price + " Lines of Code"
+	document.getElementById("upgrade9").innerHTML = upgrade7;
+	document.getElementById("upgrade9Price").innerHTML = site9Price;
+	document.getElementById("count").innerHTML = linesOfCode;
+}
+
 
 function clickThatKeyboard() {
 	linesOfCode += CPC
