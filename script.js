@@ -39,7 +39,7 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
-
+// upgrades
 function buyUpgrade1() {
 	if (linesOfCode < upgrade1Price) {
 		alert("You do not have enough lines of code!")
@@ -188,17 +188,28 @@ function buyUpgrade9() {
 	document.getElementById("count").innerHTML = linesOfCode;
 }
 
-
+// clicks per click
 function clickThatKeyboard() {
 	linesOfCode += CPC
 	document.getElementById("count").innerHTML = linesOfCode;
 }
 
+// clicks per second
 function clicksPerSecond() {
 	linesOfCode += CPS
 	document.getElementById("count").innerHTML = linesOfCode;
 }
 
+// cps
 setInterval(function() {
     		clicksPerSecond()
 		}, 1000); 
+
+// anti hold enter
+document.getElementById("button").onkeydown = function(e){
+if (e.which == 13) 
+    {
+       e.preventDefault();
+       return false;
+    }
+}
