@@ -183,7 +183,7 @@ function buyUpgrade9() {
 	upgrade9 +=1
 	upgrade9Price += 1000000
 	site9Price = upgrade9Price + " Lines of Code"
-	document.getElementById("upgrade9").innerHTML = upgrade7;
+	document.getElementById("upgrade9").innerHTML = upgrade9;
 	document.getElementById("upgrade9Price").innerHTML = site9Price;
 	document.getElementById("count").innerHTML = linesOfCode;
 }
