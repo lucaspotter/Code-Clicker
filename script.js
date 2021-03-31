@@ -200,16 +200,11 @@ function clicksPerSecond() {
 	document.getElementById("count").innerHTML = linesOfCode;
 }
 
+linesOfCode = document.cookie;
+
 // cps
 setInterval(function() {
     		clicksPerSecond()
+			document.cookie = linesOfCode;
 		}, 1000); 
 
-// anti hold enter
-document.getElementById("button").onkeydown = function(e){
-if (e.which == 13) 
-    {
-       e.preventDefault();
-       return false;
-    }
-}

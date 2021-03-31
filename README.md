@@ -21,3 +21,5 @@ v1.1.0: Added THE CHONKIEST CURSOR and also did some bug fixing
 v1.2.0: Added Obscure References and did some bug slapp
 
 v1.2 & 1/2: Stopped you from holding enter on the button
+
+v1.3: Added cookies, your save lasts while the browser is open
