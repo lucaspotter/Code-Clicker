@@ -200,11 +200,8 @@ function clicksPerSecond() {
 	document.getElementById("count").innerHTML = linesOfCode;
 }
 
-linesOfCode = document.cookie;
-
 // cps
 setInterval(function() {
     		clicksPerSecond()
-			document.cookie = linesOfCode;
 		}, 1000); 
 
