@@ -205,11 +205,3 @@ setInterval(function() {
     		clicksPerSecond()
 		}, 1000); 
 
-// anti hold enter
-document.getElementById("button").onkeydown = function(e){
-if (e.which == 13) 
-    {
-       e.preventDefault();
-       return false;
-    }
-}
