@@ -25,3 +25,5 @@ v1.2 & 1/2: Stopped you from holding enter on the button
 v1.2.6: undid last update, didn't work anyways lol
 
 v1.3: Made the game less repitive by making costs exponential
+
+v1.3.1: we don't talk about v1.3.
